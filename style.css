@@ -7,7 +7,7 @@ body {
 }
 .title-container {
     margin: 2rem;
-    min-width: 600px;
+    min-width: 100vh;
     display: flex;
     flex-direction: column;
     border: solid white;
@@ -15,7 +15,7 @@ body {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    flex-shrink: 1;
+    flex-shrink: 0;
 }
 
 .title {
@@ -32,18 +32,16 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap-reverse;
-    flex-shrink: 1;
+    flex-shrink: 0;
     justify-content: center;
-    margin: 2rem;
-    gap: 4rem;
 
 }
 
 .toolbox {
     border: solid white;
-    width: 40%;
+    width: 65vh;
     flex-shrink: 0;
-    min-width: 40%;
+    max-width: 65vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,6 +50,7 @@ body {
 }
 .wheel {
     text-align: center;
+    margin: 0;
 }
 
 input[type=color] {
@@ -83,10 +82,10 @@ button {
 .grid {
     display: grid;
     border: 5px solid white;
-    border-radius: 5px;
-    height: 575px;
-    width: 40%;
     flex-shrink: 0;
+    border-radius: 5px;
+    height: 65vh;
+    width: 65vh;
     min-width: 30%;
-    padding: 5%;
+    padding: 2%; /*remove when taking off border*/
   }
