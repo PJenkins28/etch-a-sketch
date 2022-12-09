@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-a-Sketch</title>
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title">Etch-a-Sketch</h1>
+        <div id="sub-content">Create pixelated art. Choose a color option and the sizing and get creative!</div>
+    </div>
+    <div class="grid-container">
+        <div class="toolbox">
+            <!--This is where I will insert the color-picker for single-color mode-->
+            <div><h2 class="wheel">Pick a Color</h2>
+                <canvas id="color-picker" width="200" height="100" style="border: 1px solid white"></canvas>
+            </div>
+            <button>Single-Color Mode</button>
+            <button>Rainbow Mode</button>
+            <button>Erase</button>
+            <button>Reset</button>
+        </div>
+        <div class="grid" id="grid"></div>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
