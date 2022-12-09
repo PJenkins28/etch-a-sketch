@@ -27,13 +27,17 @@ function makeGrid(size) {
 
 makeGrid(16); // **Need to make funciton that allows user to dynamically change grid size
 
+//var picker;
+//var pickerCtx;
 // Creating Color-Picker element
-var picker = document.getElementById("color-picker");
-var pickerCtx = picker.getContext("2d");
+//var picker = document.getElementById("color-picker");
+//var pickerCtx = picker.getContext("2d");
 
+const canvas = document.getElementById("canvas");
+const pickerCtx = canvas.getContext("2d",{willReadFrequently: true});
 //C reates gradient
-var color = 'rgba(0,0,255,1)';
-var gradient = pickerCtx.createLinearGradient(0, 0, pickerCtx.canvas.width,0);
+const color = 'rgba(0,0,255,1)';
+const gradient = pickerCtx.createLinearGradient(0, 0, pickerCtx.canvas.width,0);
 gradient.addColorStop(0, "black");
 gradient.addColorStop(1, color);
 
@@ -49,12 +53,14 @@ pickerCtx.fillStyle = gradientV;
 pickerCtx.fillRect(0, 0, pickerCtx.canvas.width, pickerCtx.canvas.height); 
 
 // Event Listener that records color mouse clicks on color-picker
-    picker.addEventListener('click',function(event){
+        canvas.addEventListener('click', function(event){
         let x = event.clientX;  // Get X coordinate
         let y = event.clientY;  // Get Y coordinate
-        const pixel = pickerCtx.getImageData(x,y,1,1)['data'];   // Read pixel Color
-        rgb = `rgb(${pixel[0]},${pixel[1]},${pixel[2]})`;
-        document.body.style.backgroundColor = rgb;    // Set this color to body of the document
+        const pixel = pickerCtx.getImageData(x,y,1,1);   // Read pixel Color
+        const data = pixel.data;
+        const rgb = `rgb(${data[0]},${data[1]},${data[2]})`;
+        console.log(rgb);
+        //document.body.style.backgroundColor = rgb ;    // Set this color to body of the document
     } );
 
 /*function colorSelection(event) {
