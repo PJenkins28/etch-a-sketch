@@ -15,16 +15,20 @@
     <div class="grid-container">
         <div class="toolbox">
             <div><h2 class="wheel">Pick a Color</h2></div>
-            <input type="color" value="#FFFFFF" class="color">
-            <button>Single-Color Mode</button>
+            <input type="color" value="#FFFFFF" id="color">
+            <button id="single">Single-Color Mode</button>
             <button>Rainbow Mode</button>
-            <button>Erase</button>
+            <button id="erase">Erase</button>
             <button>Reset</button>
-            <input type="range" min="4" max="256" value="16" id="grid-range">
+            <input type="range" min="4" max="256" value="16" id="grid-range" oninput="displaySlider(this.value)">
+            <div class="size-wrapper">
+                <span>Grid Size: </span><span id="slider-value"></span>
+            </div>
         </div>
         <div class="grid" id="grid"></div>
     </div>
 
-<script src="main.js"></script>
+
 </body>
+<script src="main.js"></script>
 </html>

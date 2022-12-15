@@ -57,6 +57,7 @@ input[type=color] {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    cursor: pointer;
 }
 input[type="color"]::-webkit-color-swatch {
     padding: 0;
@@ -77,11 +78,12 @@ button {
     background-color: white;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
 
 }
 .grid {
     display: grid;
-    border: 5px solid white;
+    /*border: 5px solid white;*/
     flex-shrink: 0;
     border-radius: 5px;
     height: 65vh;
@@ -89,3 +91,10 @@ button {
     min-width: 30%;
     padding: 2%; /*remove when taking off border*/
   }
+input[type="range"] {
+    cursor: pointer;
+    width: 30vh;
+}
+#slider-value {
+    color: white;
+}
