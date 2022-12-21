@@ -10,20 +10,17 @@
 <body>
     <div class="title-container">
         <h1 class="title">Etch-a-Sketch</h1>
-        <div id="sub-content">Create pixelated art. Choose a color option and the sizing and get creative!</div>
+        <div id="sub-content">Create pixelated art. Choose the color and grid size - then get creative!</div>
     </div>
     <div class="grid-container">
         <div class="toolbox">
             <div><h2 class="wheel">Pick a Color</h2></div>
             <input type="color" value="#FFFFFF" id="color">
-            <button id="single">Single-Color Mode</button>
-            <button>Rainbow Mode</button>
+            <button id="single">Color</button>
             <button id="erase">Erase</button>
-            <button>Reset</button>
-            <input type="range" min="4" max="256" value="16" id="grid-range" oninput="displaySlider(this.value)">
-            <div class="size-wrapper">
-                <span>Grid Size: </span><span id="slider-value"></span>
-            </div>
+            <button id="reset">Reset</button>
+            <label for="grid-size">Grid Size:</label>
+            <input type="number" min="4" max="256" value="16" id="grid-size">
         </div>
         <div class="grid" id="grid"></div>
     </div>
